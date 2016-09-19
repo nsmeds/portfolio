@@ -1,0 +1,40 @@
+.header-headings {
+  text-transform: uppercase;
+}
+
+.nav:hover ul {
+  display: block;
+  list-style: none;
+}
+
+.tab {
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.menu-items {
+  display: none;
+}
+
+.icons li {
+  display: inline-block;
+  padding-right: 1em;
+}
+
+#profile-pic {
+  border-radius: 50%;
+}
+
+
+
+@media only screen and (min-width: 480px) {
+
+  #menuburger {
+    display: none;
+  }
+
+  .menu-items {
+    display: block;
+  }
+
+}

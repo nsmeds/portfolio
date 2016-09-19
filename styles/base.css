@@ -1,0 +1,23 @@
+body {
+  font-family: Lato;
+  }
+
+/***** List Styles *****/
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+/***** Link Styles *****/
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+a:visited {
+  color: inherit;
+}

@@ -1,0 +1,23 @@
+header {
+  border-bottom: 1px solid #000;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.tab {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+@media only screen and (min-width: 480px) {
+
+  header {
+    text-align: center;
+  }
+
+  .tab {
+    display: inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
