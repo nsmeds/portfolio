@@ -7,6 +7,15 @@ header {
   border-bottom: 1px solid #000;
 }
 
+h1 {
+  margin: 0.3em 0;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin: 0;
+}
+
 main {
   padding: 0 0.5em 0.75em 0.5em;
 }
@@ -23,13 +32,8 @@ footer {
   padding-bottom: 0.2em;
 }
 
-h1 {
-  margin: 0.3em 0;
-}
-
-h2 {
-  font-size: 1.4em;
-  margin: 0;
+.dateline {
+  font-size: 0.8em;
 }
 
 @media only screen and (min-width: 480px) {
