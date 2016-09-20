@@ -1,5 +1,5 @@
 body {
-  font-family: Lato;
+  font-family: 'Lato', sans-serif;
   }
 
 /***** List Styles *****/
@@ -12,6 +12,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
