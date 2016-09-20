@@ -21,10 +21,6 @@
   padding-right: 1em;
 }
 
-#profile-pic {
-  border-radius: 50%;
-}
-
 .project {
   padding-bottom: 1em;
   border-bottom: 1px solid #000;
@@ -37,8 +33,6 @@
 .template {
   display: none;
 }
-
-
 
 @media only screen and (min-width: 480px) {
 
