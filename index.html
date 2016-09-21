@@ -23,20 +23,32 @@
           <li class="tab"><a href="https://www.linkedin.com/in/niilo-smeds-4a0605120"><img src="vendor/images/linkedin.svg" alt="LinkedIn"></a></li>
         </ul>
         <ul class="menu-items">
-          <li class="tab"><a href="#">Home</a></li>
-          <li class="tab"><a href="#">About</a></li>
-          <li class="tab"><a href="#projects">Projects</a></li>
+          <li class="tab" data-content="projects"><a href="#">Home</a></li>
+          <li class="tab" data-content="about"><a href="#">About</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section id="projects">
+      <section id="projects" class="tab-content">
         <section class="template project">
           <h3>Title</h3>
           <p class="project-body-text"></p>
           <div class="dateline">
             published <time pubdate datetime="1970-01-01">Publish Time</time>
           </div>
+        </section>
+      </section>
+      <section id="about" class="tab-content">
+        <h3>About Me</h3>
+        <section>
+          <p>I'm a front-end web developer working on building powerful single-page applications. I'd like to land a bodacious job with a killer company, preferably located in Portland, Oregon.</p>
+          <p>Some of my specializations include:</p>
+          <ul>
+            <li>JavaScript</li>
+            <li>jQuery</li>
+            <li>CSS3</li>
+            <li>HTML5</li>
+          </ul>
         </section>
       </section>
     </main>
@@ -46,5 +58,6 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="scripts/projectArray.js"></script>
     <script src="scripts/projects.js"></script>
+    <script src="scripts/sectionView.js"></script>
   </body>
 </html>

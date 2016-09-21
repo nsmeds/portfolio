@@ -34,6 +34,11 @@
   display: none;
 }
 
+#about li {
+  list-style: disc outside;
+  margin-left: 1em;
+}
+
 @media only screen and (min-width: 480px) {
 
   #menuburger {
