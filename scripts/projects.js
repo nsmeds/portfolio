@@ -31,6 +31,5 @@ projectArray.forEach(function(ele) {
 });
 
 projects.forEach(function(a) {
-  console.log(a);
   $('#projects').append(a.toHtml());
 });
