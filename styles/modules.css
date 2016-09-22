@@ -2,7 +2,7 @@
   text-transform: uppercase;
 }
 
-#menuburger:hover ~ ul {
+nav:hover ul {
   display: block;
   list-style: none;
 }
