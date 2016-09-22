@@ -23,7 +23,7 @@
 
 .project {
   padding-bottom: 1em;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid hsl(200,50%,89%);
 }
 
 .project:nth-last-of-type(1) {
