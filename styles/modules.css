@@ -30,6 +30,10 @@
   border: none;
 }
 
+.read-more {
+  font-size: 0.8em;
+}
+
 .template {
   display: none;
 }
