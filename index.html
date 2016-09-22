@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lato:400" rel="stylesheet">
     <script id="template" type="text/x-handlebars-template">
       <section class="project" data-author="{{author}}">
         <h3>{{title}}</h3>
@@ -28,13 +28,13 @@
       </section>
       <nav class="nav">
         <ul class="icons">
-          <li class="tab" id="menuburger"><a href="#"><img src="vendor/images/menuburger.svg" alt="Menu"></a></li>
+          <li class="tab" data-id="menu" id="menuburger"><a href="#"><img src="vendor/images/menuburger.svg" alt="Menu"></a></li>
           <li class="tab"><a href="https://github.com/nsmeds"><img src="vendor/images/github.svg" alt="Github"></a></li>
           <li class="tab"><a href="https://www.linkedin.com/in/niilo-smeds-4a0605120"><img src="vendor/images/linkedin.svg" alt="LinkedIn"></a></li>
-        </ul>
-        <ul class="menu-items">
-          <li class="tab" data-content="projects"><a href="#">Home</a></li>
-          <li class="tab" data-content="about"><a href="#">About</a></li>
+            <ul class="menu-items">
+              <li class="tab" data-content="projects"><a href="#">Home</a></li>
+              <li class="tab" data-content="about"><a href="#">About</a></li>
+          </ul>
         </ul>
       </nav>
     </header>
