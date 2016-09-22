@@ -12,10 +12,10 @@ sectionView.tabToggle = function() {
 
 // Show only the first paragraph of each project description, then reveal hidden paragraphs when 'more' is clicked.
 sectionView.showMore = function() {
-  $('.project *:nth-of-type(n+2)').hide();
+  $('.project *:nth-of-type(n+3)').hide();
   $('a.read-more').on('click', function(e) {
     e.preventDefault();
-    var $selectedProject = $(this).prev();
+    var $selectedProject = $(this).parent();
     $selectedProject.find('p').show();
     $(this).hide();
   });
