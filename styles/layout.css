@@ -1,14 +1,22 @@
 body {
   margin-left: 5%;
   margin-right: 5%;
+  font-weight: 300;
+  font-family: 'Open Sans', monospace;
 }
 
 header {
   border-bottom: 1px solid hsl(200,50%,89%);
 }
 
+h3, .tab {
+  color: hsl(200,50%,38%);
+}
+
 h1, h2 {
-  color: hsl(200,50%,89%);
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: hsl(200,50%,38%);
 }
 
 h1 {
@@ -18,6 +26,10 @@ h1 {
 h2 {
   font-size: 1.4em;
   margin: 0;
+}
+
+h3 {
+  font-weight: 400;
 }
 
 main {
@@ -39,39 +51,4 @@ footer {
 .dateline {
   font-size: 0.8em;
   margin-top: 1em;
-}
-
-@media only screen and (min-width: 480px) {
-
-  header {
-    text-align: center;
-  }
-
-  header,
-  footer {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  main {
-    max-width: 640px;
-    margin: 0 auto;
-  }
-
-  .tab {
-    display: inline-block;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-
-  h1 {
-    font-size: 2.2em;
-    margin: 0.5em 0;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
-
 }

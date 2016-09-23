@@ -8,7 +8,17 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lato:400" rel="stylesheet">
+    <script id="template" type="text/x-handlebars-template">
+      <section class="project" data-author="{{author}}">
+        <h3>{{title}}</h3>
+        <p class="project-body-text">{{{body}}}</p>
+        <a href="#" class="read-more">More ...</a>
+        <div class="dateline">
+          {{publishStatus}}
+        </div>
+      </section>
+    </script>
   </head>
   <body>
     <header>
@@ -16,28 +26,20 @@
       <h1>Niilo Smeds</h1>
       <h2>Front-End Developer</h2>
       </section>
-      <nav class="nav">
+      <nav class="nav clearfix">
         <ul class="icons">
-          <li class="tab" id="menuburger"><a href="#"><img src="vendor/images/menuburger.svg" alt="Menu"></a></li>
+          <li class="tab" data-id="menu" id="menuburger"><a href="#"><img src="vendor/images/menuburger.svg" alt="Menu"></a></li>
           <li class="tab"><a href="https://github.com/nsmeds"><img src="vendor/images/github.svg" alt="Github"></a></li>
           <li class="tab"><a href="https://www.linkedin.com/in/niilo-smeds-4a0605120"><img src="vendor/images/linkedin.svg" alt="LinkedIn"></a></li>
         </ul>
         <ul class="menu-items">
-          <li class="tab" data-content="projects"><a href="#">Home</a></li>
-          <li class="tab" data-content="about"><a href="#">About</a></li>
+          <li class="tab" data-tab="projects"><a href="#">Home</a></li>
+          <li class="tab" data-tab="about"><a href="#">About</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section id="projects" class="tab-content">
-        <section class="template project">
-          <h3>Title</h3>
-          <p class="project-body-text"></p>
-          <a href="#" class="read-more">More ...</a>
-          <div class="dateline">
-            published <time pubdate datetime="1970-01-01">Publish Time</time>
-          </div>
-        </section>
       </section>
       <section id="about" class="tab-content">
         <h3>About Me</h3>
@@ -57,6 +59,7 @@
       &copy; 2016 Niilo Smeds | <a href="mailto:email@email.email">Email me</a>
     </footer>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
     <script src="scripts/projectArray.js"></script>
     <script src="scripts/projects.js"></script>
     <script src="scripts/sectionView.js"></script>
