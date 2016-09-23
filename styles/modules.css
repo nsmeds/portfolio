@@ -83,4 +83,27 @@ nav:hover ul {
   h2 {
     font-size: 1.5em;
   }
+
+  .nav ul {
+    display: inline-block;
+    margin-bottom: 0.2em;
+  }
+
+  .nav:hover ul {
+    display: inline-block;
+  }
+
+  .clearfix {
+    overflow: auto;
+  }
+
+  nav ul:first-of-type {
+    float: right;
+    padding-right: 1em;
+  }
+
+  nav ul:nth-of-type(2) {
+    float: left;
+    padding-left: 1em;
+  }
 }

@@ -9,13 +9,14 @@ header {
   border-bottom: 1px solid hsl(200,50%,89%);
 }
 
-h1, h2, h3 {
+h3, .tab {
   color: hsl(200,50%,38%);
 }
 
 h1, h2 {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
+  color: hsl(200,50%,38%);
 }
 
 h1 {
@@ -50,61 +51,4 @@ footer {
 .dateline {
   font-size: 0.8em;
   margin-top: 1em;
-}
-
-@media only screen and (min-width: 480px) {
-
-  header {
-    text-align: center;
-  }
-
-  header,
-  footer {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  main {
-    max-width: 640px;
-    margin: 0 auto;
-  }
-
-  .tab {
-    display: inline-block;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-
-  h1 {
-    font-size: 2.2em;
-    margin: 0.5em 0;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
-
-  .nav ul {
-    display: inline-block;
-  }
-
-  .nav:hover ul {
-    display: inline-block;
-  }
-
-  .clearfix {
-    overflow: auto;
-  }
-
-  nav ul:first-of-type {
-    float: right;
-    padding-right: 1em;
-  }
-
-  nav ul:nth-of-type(2) {
-    float: left;
-    padding-left: 1em;
-  }
-
 }
