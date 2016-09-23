@@ -16,8 +16,13 @@ sectionView.showMore = function() {
   $('a.read-more').on('click', function(e) {
     e.preventDefault();
     var $selectedProject = $(this).parent();
-    $selectedProject.find('p').show();
-    $(this).hide();
+    if($(this).text() === 'More ...') {
+      $selectedProject.find('p').show();
+      $(this).html('Less ...');
+    } else {
+      $selectedProject.find('*:nth-of-type(n+3)').hide();
+      $(this).html('More ...');
+    }
   });
 };
 
