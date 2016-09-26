@@ -25,14 +25,11 @@ Project.loadAll = function(dataToSort) {
   });
 };
 
-// ...
+// Fetch the data (from localStorage if possible, with an ajax call if not), then call the loadAll and renderIndex functions to display it.
 
 Project.fetchAll = function() {
   if (localStorage.projectData) {
-    // Project.loadAll(JSON.parse(localStorage.getItem(projectData)));
-    var getData = localStorage.getItem('projectData');
-    var parsedData = JSON.parse(getData);
-    Project.loadAll(parsedData);
+    Project.loadAll(JSON.parse(localStorage.getItem('projectData')));
     sectionView.renderIndex();
   } else {
     $.ajax('data/projectData.json', {
@@ -42,14 +39,12 @@ Project.fetchAll = function() {
     });
 
     function successHandler(data) {
-      console.log('success');
       localStorage.setItem('projectData', JSON.stringify(data));
       Project.loadAll(data);
       sectionView.renderIndex();
     }
 
     function errorHandler(data) {
-      console.log('error here');
       $('#projects').html('<h3>Error</h3><p> :0 :0 :0 Mistakes were made. :( :( :( </p>');
     }
   }
