@@ -17,9 +17,9 @@ Project.prototype.toHtml = function() {
 };
 
 // Sort projects by date, with the most recently published projects at the top.
-Project.loadAll = function(data) {
-  data.sort(function(a,b) {
-    return (new Date(nextElem.date)) - (new Date(curElem.date));
+Project.loadAll = function(dataToSort) {
+  dataToSort.sort(function(a,b) {
+    return (new Date(b.date)) - (new Date(a.date));
   }).forEach(function(ele) {
     Project.all.push(new Project(ele));
   });
@@ -28,11 +28,30 @@ Project.loadAll = function(data) {
 // ...
 
 Project.fetchAll = function() {
-  if (localStorage.projects) {
-    Project.loadAll(JSON.parse(localStorage.getItem(projects)));
-    sectionView.
+  if (localStorage.projectData) {
+    // Project.loadAll(JSON.parse(localStorage.getItem(projectData)));
+    var getData = localStorage.getItem('projectData');
+    var parsedData = JSON.parse(getData);
+    Project.loadAll(parsedData);
+    sectionView.renderIndex();
   } else {
+    $.ajax('data/projectData.json', {
+      method: 'GET',
+      success: successHandler,
+      error: errorHandler
+    });
 
+    function successHandler(data) {
+      console.log('success');
+      localStorage.setItem('projectData', JSON.stringify(data));
+      Project.loadAll(data);
+      sectionView.renderIndex();
+    }
+
+    function errorHandler(data) {
+      console.log('error here');
+      $('#projects').html('<h3>Error</h3><p> :0 :0 :0 Mistakes were made. :( :( :( </p>');
+    }
   }
 
 };

@@ -26,6 +26,14 @@ sectionView.showMore = function() {
   });
 };
 
-// Invoke the functions defined above.
-sectionView.tabToggle();
-sectionView.showMore();
+sectionView.renderIndex = function() {
+  Project.all.forEach(function(a) {
+    $('#projects').append(a.toHtml());
+  });
+  sectionView.tabToggle();
+  sectionView.showMore();
+};
+
+// Invoke the fetchAll function to render the index page
+
+Project.fetchAll();
