@@ -1,7 +1,5 @@
 // Wrap entire script in an IIFE.
 (function(module) {
-
-  // Create a Project object and assign its properties.
   function Project (opts) {
     Object.keys(opts).forEach(function(prop, index, keys) {
       this[prop] = opts[prop];
@@ -21,10 +19,10 @@
 
   // Sort projects by date, with the most recently published projects at the top.
   Project.loadAll = function(dataToSort) {
-    dataToSort.sort(function(a,b) {
+    Project.all = dataToSort.sort(function(a,b) {
       return (new Date(b.date)) - (new Date(a.date));
-    }).forEach(function(ele) {
-      Project.all.push(new Project(ele));
+    }).map(function(ele) {
+      return new Project(ele);
     });
   };
 
