@@ -1,10 +1,11 @@
-// Create a constructor function for project data.
+// Wrap entire script in an IIFE.
 (function(module) {
 
+  // Create a Project object and assign its properties.
   function Project (opts) {
-    for (var key in opts) {
-      this[key] = opts[key];
-    }
+    Object.keys(opts).forEach(function(prop, index, keys) {
+      this[prop] = opts[prop];
+    },this);
   }
 
   Project.all = [];
