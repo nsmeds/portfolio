@@ -1,11 +1,11 @@
-var projects = [];
-
 // Create a constructor function for project data.
 function Project (opts) {
   for (var key in opts) {
     this[key] = opts[key];
   }
 }
+
+Project.all = [];
 
 // Create a handlebars template and populate the project descriptions
 Project.prototype.toHtml = function() {
@@ -17,15 +17,36 @@ Project.prototype.toHtml = function() {
 };
 
 // Sort projects by date, with the most recently published projects at the top.
-projectArray.sort(function(curElem, nextElem) {
-  return (new Date(nextElem.date)) - (new Date(curElem.date));
-});
+Project.loadAll = function(dataToSort) {
+  dataToSort.sort(function(a,b) {
+    return (new Date(b.date)) - (new Date(a.date));
+  }).forEach(function(ele) {
+    Project.all.push(new Project(ele));
+  });
+};
 
-// Loop through projects and append each to the DOM.
-projectArray.forEach(function(ele) {
-  projects.push(new Project(ele));
-});
+// Fetch the data (from localStorage if possible, with an ajax call if not), then call the loadAll and renderIndex functions to display it.
 
-projects.forEach(function(a) {
-  $('#projects').append(a.toHtml());
-});
+Project.fetchAll = function() {
+  if (localStorage.projectData) {
+    Project.loadAll(JSON.parse(localStorage.getItem('projectData')));
+    sectionView.renderIndex();
+  } else {
+    $.ajax('data/projectData.json', {
+      method: 'GET',
+      success: successHandler,
+      error: errorHandler
+    });
+
+    function successHandler(data) {
+      localStorage.setItem('projectData', JSON.stringify(data));
+      Project.loadAll(data);
+      sectionView.renderIndex();
+    }
+
+    function errorHandler(data) {
+      $('#projects').html('<h3>Error</h3><p> :0 :0 :0 Mistakes were made. :( :( :( </p>');
+    }
+  }
+
+};
