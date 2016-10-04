@@ -19,6 +19,18 @@
         </div>
       </section>
     </script>
+    <script id="repos-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}"><h3>{{name}}</h3></a>
+        <p>Description: {{description}}</p>
+        <p>Primary Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last Updated: {{updated_at}}</p>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </li>
+    </script>
   </head>
   <body>
     <header>
@@ -35,6 +47,7 @@
         <ul class="menu-items">
           <li class="tab" data-tab="projects"><a href="/">Home</a></li>
           <li class="tab" data-tab="about"><a href="/about">About</a></li>
+          <li class="tab" data-tab="repos"><a href="/repos">Repos</a></li>
         </ul>
       </nav>
     </header>
@@ -54,17 +67,25 @@
           </ul>
         </section>
       </section>
+      <section id="repos" class="tab-content">
+        <h3>My GitHub Repos</h3>
+        <ul></ul>
+      </section>
     </main>
     <footer>
       &copy; 2016 Niilo Smeds | <a href="mailto:email@email.email">Email me</a>
     </footer>
+    <script src="githubToken.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
     <script src="models/projects.js"></script>
+    <script src="models/repos.js"></script>
     <script src="views/sectionView.js"></script>
+    <script src="views/repoView.js"></script>
     <script src="controllers/projectController.js"></script>
     <script src="controllers/aboutController.js"></script>
+    <script src="controllers/reposController.js"></script>
     <script src="controllers/routes.js"></script>
   </body>
 </html>
