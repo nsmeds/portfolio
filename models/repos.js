@@ -5,7 +5,7 @@
 
   reposObj.requestRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/users/nsmeds/repos',
+      url: '/github/users/nsmeds/repos',
       headers: {
         Authorization: 'token ' + token
       },
