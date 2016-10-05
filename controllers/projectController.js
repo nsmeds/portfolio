@@ -1,9 +1,17 @@
 (function(module) {
-  var projectController = {};
-
-  projectController.reveal = function() {
-    $('#projects').fadeIn();
+  var projectController = {
+    index: function() {
+      $('#projects').fadeIn().siblings().hide();
+    }
   };
 
+  sectionView.renderIndex = function() {
+    Project.all.forEach(function(a) {
+      $('#projects').append(a.toHtml());
+    });
+    sectionView.showMore();
+  };
+
+  Project.fetchAll(sectionView.renderIndex);
   module.projectController = projectController;
 })(window);

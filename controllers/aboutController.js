@@ -1,8 +1,8 @@
 (function(module) {
-  var aboutController = {};
-
-  aboutController.reveal = function() {
-    $('#about').fadeIn();
+  var aboutController = {
+    index: function() {
+      $('#about').fadeIn().siblings().hide();
+    }
   };
 
   module.aboutController = aboutController;

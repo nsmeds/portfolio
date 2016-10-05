@@ -1,4 +1,6 @@
-page('/about', aboutController.reveal);
-page('/repos', reposController.reveal);
-page('/', projectController.reveal);
+page('/', projectController.index);
+page('/about', aboutController.index);
+page('/repos', reposController.index);
+page('/', projectController.index);
+
 page();

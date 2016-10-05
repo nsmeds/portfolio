@@ -1,8 +1,8 @@
 (function(module) {
-  var reposController = {};
-
-  reposController.reveal = function() {
-    $('#repos').fadeIn();
+  var reposController = {
+    index: function() {
+      $('#repos').fadeIn().siblings().hide();
+    }
   };
 
   module.reposController = reposController;
