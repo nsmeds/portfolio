@@ -8,7 +8,7 @@
 
   repoView.renderRepos = function() {
     $('#repos ul').empty().append(
-      reposObj.withTheAttribute('name')
+      reposObj.withTheAttribute('fork')
       .map(repoCompiler)
     );
   };
