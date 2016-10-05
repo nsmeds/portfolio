@@ -22,6 +22,6 @@
       return aRepo[myAttr];
     });
   };
-  
+
   module.reposObj = reposObj;
 })(window);

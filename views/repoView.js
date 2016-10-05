@@ -1,7 +1,8 @@
 (function(module) {
   var repoView = {};
   var repoCompiler = function(repo) {
-    var template = Handlebars.compile($('#repo-template').text());
+    var source = $('#repos-template').text();
+    var template = Handlebars.compile(source);
     return template(repo);
   };
 
