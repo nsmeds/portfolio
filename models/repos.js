@@ -5,11 +5,8 @@
 
   reposObj.requestRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/users/nsmeds/repos',
-      headers: {
-        Authorization: 'token ' + token
-      },
-      success: successHandler,
+      url: '/github/users/nsmeds/repos',
+      success: successHandler
     });
     function successHandler(data) {
       reposObj.allRepos = data;
