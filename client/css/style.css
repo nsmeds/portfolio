@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,400');
+
+html {
+  min-height: 100%;
+
+}
+
+body {
+  background: #fff;
+  /*background: linear-gradient(hsl(0,0%,19%), hsl(0,0%,30%) 30%);*/
+  color: hsl(0,0%,10%);
+}
+
+/***** List Styles *****/
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+/***** Link Styles *****/
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+a:visited {
+  color: inherit;
+}
+
+/***** Layout *****/
+
+body {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-weight: 400;
+  font-family: 'Open Sans', monospace;
+}
+
+header {
+  border-bottom: 1px solid hsl(200,50%,89%);
+}
+
+h3, .tab {
+  color: hsl(200,50%,38%);
+}
+
+h1, h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: hsl(200,50%,38%);
+}
+
+h1 {
+  margin: 0.3em 0;
+}
+
+h2 {
+  /*font-size: 1.4em;*/
+  margin: 0;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+.main-content {
+  padding: 0 0.5em 0.75em 0.5em;
+}
+
+footer {
+  border-top: 1px solid hsl(200,50%,89%);
+  margin-bottom: 1em;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.tab {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+.dateline {
+  font-size: 0.8em;
+  margin-top: 1em;
+}
+
+/**** Modules ****/
+
+.header-headings {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  text-transform: uppercase;
+}
+
+nav:hover ul {
+  /*display: block;*/
+  list-style: none;
+}
+
+.tab {
+  /*font-size: 1.2em;*/
+  /*text-transform: uppercase;*/
+}
+
+.menu-items {
+  display: none;
+}
+
+.icons {
+    display: flex;
+    /*flex-basis: 1;*/
+}
+
+.icons li {
+  /*display: inline-block;*/
+  padding-right: 1em;
+}
+
+.project {
+  padding-bottom: 1em;
+  border-bottom: 1px solid hsl(200,50%,89%);
+}
+
+.project:nth-last-of-type(1) {
+  border: none;
+}
+
+.read-more {
+  /*font-size: 0.8em;*/
+}
+
+.template {
+  display: none;
+}
+
+#about li {
+  list-style: disc outside;
+  margin-left: 1em;
+}
+
+@media only screen and (min-width: 480px) {
+
+  #menuburger {
+    display: none;
+  }
+
+  .menu-items {
+    display: flex;
+  }
+
+  header,
+  footer {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-content {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .tab {
+    /*display: inline-block;*/
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin: 0.2em 0;
+  }
+
+  h3 {
+      margin: 0.2em 0;
+  }
+
+  .upper-nav {
+      display: flex;
+  }
+
+  .lower-nav {
+      display: flex;
+  }
+
+}
