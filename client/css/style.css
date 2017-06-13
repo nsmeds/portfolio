@@ -7,8 +7,7 @@ html {
 
 body {
   background: #fff;
-  /*background: linear-gradient(hsl(0,0%,19%), hsl(0,0%,30%) 30%);*/
-  color: hsl(0,0%,10%);
+  color: hsl(0,0%,25%);
 }
 
 /***** List Styles *****/
@@ -41,7 +40,7 @@ body {
   font-family: 'Open Sans', monospace;
 }
 
-header {
+nav {
   border-bottom: 1px solid hsl(200,50%,89%);
 }
 
@@ -56,6 +55,7 @@ h1, h2 {
 }
 
 h1 {
+  font-size: 2em;
   margin: 0.3em 0;
 }
 
@@ -66,7 +66,9 @@ h2 {
 
 h3 {
   font-weight: 400;
+  margin: 0.2em 0;
 }
+
 
 .main-content {
   padding: 0 0.5em 0.75em 0.5em;
@@ -77,11 +79,6 @@ footer {
   margin-bottom: 1em;
   text-align: center;
   padding-top: 1em;
-}
-
-.tab {
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
 }
 
 .dateline {
@@ -96,16 +93,13 @@ footer {
   flex-direction: column;
   flex-grow: 2;
   text-transform: uppercase;
+  padding-left: 1em;
+  margin-bottom: 0.2em;
 }
 
 nav:hover ul {
   /*display: block;*/
   list-style: none;
-}
-
-.tab {
-  /*font-size: 1.2em;*/
-  /*text-transform: uppercase;*/
 }
 
 .menu-items {
@@ -114,11 +108,11 @@ nav:hover ul {
 
 .icons {
     display: flex;
-    /*flex-basis: 1;*/
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .icons li {
-  /*display: inline-block;*/
   padding-right: 1em;
 }
 
@@ -131,9 +125,9 @@ nav:hover ul {
   border: none;
 }
 
-.read-more {
-  /*font-size: 0.8em;*/
-}
+/*.read-more {
+  font-size: 0.8em;
+}*/
 
 .template {
   display: none;
@@ -152,6 +146,8 @@ nav:hover ul {
 
   .menu-items {
     display: flex;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
   }
 
   header,
@@ -167,7 +163,6 @@ nav:hover ul {
   }
 
   .tab {
-    /*display: inline-block;*/
     padding-left: 1em;
     padding-right: 1em;
   }
@@ -175,10 +170,6 @@ nav:hover ul {
   h1 {
     font-size: 2em;
     margin: 0.2em 0;
-  }
-
-  h3 {
-      margin: 0.2em 0;
   }
 
   .upper-nav {
