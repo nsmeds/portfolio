@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const Header = props => {
 
@@ -18,9 +19,9 @@ const Header = props => {
             </nav>
             <nav className="lower-nav">
                 <ul className="menu-items">
-                    <li className="tab" data-tab="projects"><a href="/">Portfolio</a></li>
-                    <li className="tab" data-tab="about"><a href="/about">About</a></li>
-                    <li className="tab" data-tab="repos"><a href="/repos">Contact</a></li>
+                    <li className="tab" data-tab="projects"><Link to="/portfolio">Portfolio</Link></li>
+                    <li className="tab" data-tab="about"><Link to="/">About</Link></li>
+                    <li className="tab" data-tab="repos"><Link to="/contact">Contact</Link></li>
                 </ul>
             </nav>
         </header>

@@ -16,11 +16,6 @@ export default class App extends React.Component {
         };
     }
 
-    componentDidMount() {
-        console.log('this.state.projects', this.state.projects);
-        // this.getProjectData();
-    }
-
     // getProjectData = () => {
     //     console.log(data);
     //     axios.get(data)
@@ -32,14 +27,22 @@ export default class App extends React.Component {
     //         })
     // }
 
+
     render() {
-        return (
-            <div>
-                <Header />
-                <About />
+        const PortfolioRoute = (props) => {
+            return (
                 <Portfolio {...this.state.projects} />
-                <Contact />
-            </div>
+            )
+        }
+        return (
+            <Router>
+                <div>
+                    <Header />
+                    <Route exact path="/" component={About} />
+                    <Route path="/portfolio" render={PortfolioRoute} />
+                    <Route path="/contact" component={Contact} />
+                </div>
+            </Router>
         )
     }
 }

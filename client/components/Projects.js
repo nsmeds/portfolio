@@ -2,7 +2,7 @@ import React from 'react';
 
 const Projects = props => {
 
-    // console.log('props from Projects', props);
+    console.log('props from Projects', props);
 
     function createBodyHtml() {
         return {__html: props.body}
