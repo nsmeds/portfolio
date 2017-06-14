@@ -3,7 +3,7 @@ import Projects from './Projects';
 
 const Portfolio = props => {
 
-    console.log('props from portfolio', props);
+    // console.log('props from portfolio', props);
 
     let data = props.data;
     let currentProject = props.data[0];
@@ -11,6 +11,8 @@ const Portfolio = props => {
     return (
 
         <div className='main-content'>
+            <button>Previous</button>
+            <button>Next</button>
             <ul>
                 <Projects {...currentProject}/>
             </ul>

@@ -11,7 +11,8 @@ module.exports = {
     entry: './client/index.js',
     output: {
         path: path.resolve('dist'),
-        filename: 'index_bundle.js'
+        filename: 'index_bundle.js',
+        publicPath: '/'
     },
     module: {
         loaders: [
@@ -20,8 +21,11 @@ module.exports = {
             { test: /\.css$/, loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })}
         ]
     },
+    devServer: {
+        historyApiFallback: true,
+    },
     plugins: [
         HtmlWebpackPluginConfig,
         new ExtractTextPlugin('[name].css')
-        ]
+    ]
 }
