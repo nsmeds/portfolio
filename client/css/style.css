@@ -44,7 +44,7 @@ nav {
   border-bottom: 1px solid hsl(200,50%,89%);
 }
 
-h3, .tab, .project-nav {
+h3, .tab, .project-nav-button {
   color: hsl(200,50%,38%);
 }
 
@@ -70,10 +70,13 @@ h3 {
 }
 
 .main-content {
-  display: flex;
-  flex-direction: column;
   padding: 0 0.5em 0.75em 0.5em;
 }
+
+.portfolio-projects {
+  display: flex;
+  flex-direction: row;
+  }
 
 .project-nav {
   display: flex;
@@ -146,19 +149,38 @@ nav:hover ul {
   margin-left: 1em;
 }
 
-.project-nav button {
+.project-nav-button {
   width: 60px;
-  height: 60px;
+  height: 100vh;
   border-radius: 50%;
   background: inherit;
   border: none;
   font-size: 30px;
-  color: inherit;
   cursor: pointer;
 }
 
-.project-nav button:disabled {
-  opacity: 0.3;
+.project-nav-button[name="prev"] {
+  margin-left: -1em;
+  margin-right: 0.5em;
+}
+
+.project-nav-button[name="next"] {
+  margin-right: -1em;
+  margin-left: 0.5em;
+}
+
+.project-nav-button:hover {
+  opacity: 0.5;
+}
+
+.project-nav-button:disabled {
+  color: hsl(0,0%,25%);
+  opacity: 0.25;
+}
+
+.project-nav-button:focus {
+  outline-color: #fff;
+  color: hsl(200, 50%, 60%);
 }
 
 @media only screen and (min-width: 480px) {
@@ -201,6 +223,16 @@ nav:hover ul {
 
   .lower-nav {
       display: flex;
+  }
+
+  .project-nav-button[name="prev"] {
+    margin-left: -1.5em;
+    margin-right: 1em;
+  } 
+
+  .project-nav-button[name="next"] {
+    margin-right: -1.5em;
+    margin-left: 1em;
   }
 
 }
