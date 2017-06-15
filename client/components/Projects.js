@@ -13,8 +13,8 @@ const Projects = props => {
                     <h4><a href={props.url}>{props.title}</a></h4>
                     <img src={props.img} />
                     <div dangerouslySetInnerHTML={createBodyHtml()}></div>
-                    <a href={props.links[0]}>Source on Github</a> |
-                    <a href={props.links[1]}>Live Site</a>
+                    <a href={props.links.github}>Source on Github</a> |
+                    <a href={props.links.live}> Live Site</a>
                 </li>
     )
 }
