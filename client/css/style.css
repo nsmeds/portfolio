@@ -183,6 +183,18 @@ nav:hover ul {
   color: hsl(200, 50%, 60%);
 }
 
+.project-li {
+  text-align: center;
+}
+
+.project-image {
+  max-height: 50vh;
+}
+
+.project-body {
+  text-align: left;
+}
+
 @media only screen and (min-width: 480px) {
 
   #menuburger {

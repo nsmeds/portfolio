@@ -7,17 +7,17 @@
       "github": "https://github.com/nsmeds/riverbed-server",
       "live": "https://riverbed.herokuapp.com/"
     },
-    "image": ""
+    "image": "vendor/images/riverbed.jpg"
   },
   {
     "url": "https://github.com/Portamento-development/",
     "title": "Portamento",
     "body": "<p>A browser-based synthesizer and sequencer with social components. Users can instantly create and edit sounds and loops, share their creations with others, and rate their favorites. Built with AngularJS, MongoDB, Express, Node and <a href='https://tonejs.github.io/'>Tone.js</a>, a sound generation tool built on top of the Web Audio API.</p>",
     "links": {
-      "github": "https://github.com/Portamento-development/",
+      "github": "https://github.com/Portamento-development/portamento-app",
       "live": "https://portamento.herokuapp.com/"
     },
-    "image": ""
+    "image": "vendor/images/portamento.jpg"
   },
   {
     "url": "https://github.com/nsmeds/CacheMoneyApp",
