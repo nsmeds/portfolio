@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,700');
 
 html {
   min-height: 100%;
@@ -6,6 +6,7 @@ html {
 }
 
 body {
+  margin: 0;
   background: #fff;
   color: hsl(0,0%,25%);
 }
@@ -34,14 +35,8 @@ a:visited {
 /***** Layout *****/
 
 body {
-  margin-left: 5%;
-  margin-right: 5%;
   font-weight: 400;
   font-family: 'Open Sans', monospace;
-}
-
-nav {
-  border-bottom: 1px solid hsl(200,50%,89%);
 }
 
 h3, .tab, .project-nav-button {
@@ -50,7 +45,8 @@ h3, .tab, .project-nav-button {
 
 h1, h2 {
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
+  letter-spacing: 0.2em;
   color: hsl(200,50%,38%);
 }
 
@@ -69,14 +65,43 @@ h3 {
   margin: 0.2em 0;
 }
 
-.main-content {
-  padding: 0 0.5em 0.75em 0.5em;
+nav {
+  border-bottom: 1px solid hsl(200,50%,89%);
 }
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 0.75em 0;
+}
+
+#about, #contact {
+  flex-direction: column;
+  align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.main-content p {
+  font-size: 0.9em;
+  max-width: 640px;
+}
+
+.main-content ul {
+  padding: 0;
+  margin: 0 0.5em;
+}
+
+/*.portfolio-wrap {
+  border: 1px solid #eee;
+  border-radius: 3px;
+  margin: 1em 0.5em;
+}*/
 
 .portfolio-projects {
   display: flex;
   flex-direction: row;
-  }
+}
 
 .project-nav {
   display: flex;
@@ -144,29 +169,22 @@ nav:hover ul {
   display: none;
 }
 
-#about li {
-  list-style: disc outside;
-  margin-left: 1em;
-}
-
 .project-nav-button {
-  width: 60px;
   height: 30vh;
   border-radius: 50%;
   background: inherit;
   border: none;
   font-size: 30px;
   cursor: pointer;
+  
 }
 
 .project-nav-button[name="prev"] {
-  margin-left: -1em;
-  margin-right: 0.5em;
+  padding: 0 .2em 0 0;
 }
 
 .project-nav-button[name="next"] {
-  margin-right: -1em;
-  margin-left: 0.5em;
+  padding: 0 0 0 .2em;
 }
 
 .project-nav-button:hover {
@@ -184,14 +202,19 @@ nav:hover ul {
 }
 
 .project-li {
-  font-size: 0.9em;
   text-align: center;
 }
 
 .project-li h4 {
+  font-weight: 700;
   text-align: left;
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+.project-li,
+.project-li a {
+  font-size: 0.9em;
 }
 
 .project-image {
@@ -199,6 +222,7 @@ nav:hover ul {
   border-radius: 2px;
   border: 1px solid #eee;
   padding: 0.2em;
+  max-width: 100%;
 }
 
 .project-body {
@@ -224,11 +248,6 @@ nav:hover ul {
     margin-right: auto;
   }
 
-  .main-content {
-    max-width: 640px;
-    margin: 0 auto;
-  }
-
   .tab {
     padding-left: 1em;
     padding-right: 1em;
@@ -247,7 +266,15 @@ nav:hover ul {
       display: flex;
   }
 
-  .project-nav-button[name="prev"] {
+  .main-content {
+    padding: 0 0.5em 0.75em 0.5em;
+  }
+  
+  .main-content ul {
+    margin: 0 1em;
+  }
+
+  /*.project-nav-button[name="prev"] {
     margin-left: -1.5em;
     margin-right: 1em;
   } 
@@ -255,6 +282,6 @@ nav:hover ul {
   .project-nav-button[name="next"] {
     margin-right: -1.5em;
     margin-left: 1em;
-  }
+  }*/
 
 }
