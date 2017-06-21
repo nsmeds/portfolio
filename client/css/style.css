@@ -92,6 +92,10 @@ nav {
   margin: 0 0.5em;
 }
 
+.main-content a {
+  color: hsl(170, 50%, 30%);
+}
+
 /*.portfolio-wrap {
   border: 1px solid #eee;
   border-radius: 3px;
@@ -212,7 +216,6 @@ nav:hover ul {
   margin-bottom: 1em;
 }
 
-.project-li,
 .project-li a {
   font-size: 0.9em;
 }
