@@ -53,6 +53,7 @@ h1, h2 {
 h1 {
   font-size: 2em;
   margin: 0.3em 0;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -63,6 +64,7 @@ h2 {
 h3 {
   font-weight: 400;
   margin: 0.2em 0;
+  letter-spacing: 0.1em;
 }
 
 nav {
@@ -93,14 +95,18 @@ nav {
 }
 
 .main-content a {
-  color: hsl(170, 50%, 30%);
+  color: hsl(200, 50%, 38%);
 }
 
-/*.portfolio-wrap {
-  border: 1px solid #eee;
-  border-radius: 3px;
-  margin: 1em 0.5em;
-}*/
+.main-content h4 {
+  align-self: left;
+}
+
+.content-wrap {
+  align-items: flex-start;
+  width: 100%;
+  max-width: 640px;
+}
 
 .portfolio-projects {
   display: flex;
@@ -132,7 +138,6 @@ footer {
   display: flex;
   flex-direction: column;
   flex-grow: 2;
-  text-transform: uppercase;
   padding-left: 1em;
   margin-bottom: 0.2em;
 }
@@ -209,16 +214,18 @@ nav:hover ul {
   text-align: center;
 }
 
+.project-li a {
+  font-size: 0.9em;
+}
+
 .project-li h4 {
   font-weight: 700;
   text-align: left;
   margin-top: 1em;
   margin-bottom: 1em;
+  font-size: 1.1em;
 }
 
-.project-li a {
-  font-size: 0.9em;
-}
 
 .project-image {
   max-height: 50vh;
