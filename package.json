@@ -1,12 +1,13 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "Basic node server",
+  "description": "Niilo Smeds personal portfolio",
   "main": "server.js",
   "dependencies": {
     "axios": "^0.16.2",
     "express": "^4.14.0",
-    "react-mailto": "^0.4.0"
+    "react-mailto": "^0.4.0",
+    "react-transition-group": "^1.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",

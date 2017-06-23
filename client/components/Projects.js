@@ -9,7 +9,8 @@ const Projects = props => {
     }
 
     return (
-                <li className="project-li">
+
+                <li className="project-li" key={props.key}>
                     <h4><a href={props.url}>{props.title}</a></h4>
                     <div className="project-body" dangerouslySetInnerHTML={createBodyHtml()}></div>
                     {props.image && <a href={props.links.github}><img className="project-image" src={props.image} /></a>}

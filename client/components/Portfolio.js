@@ -1,9 +1,9 @@
 import React from 'react';
+import { CSSTransitionGroup } from 'react-transition-group';
 import Projects from './Projects';
 
 class Portfolio extends React.Component {
 
-    // console.log('props from portfolio', props);
 
     constructor(props) {
         super(props);
@@ -30,7 +30,9 @@ class Portfolio extends React.Component {
                     </div>*/}
                     <button className='project-nav-button' name='prev' onClick={this.handleClick} disabled={this.currentIndex > 0 ? false : true}>&lang;</button>
                     <ul>
-                        <Projects {...this.state.currentProject}/>
+                        <CSSTransitionGroup transitionName="fade" transitionEnterTimeout={300} transitionLeaveTimeout={300}>
+                            <Projects key={this.state.currentProject.key} {...this.state.currentProject}/>
+                        </CSSTransitionGroup>
                     </ul>
                     <button className='project-nav-button' name='next' onClick={this.handleClick} disabled={this.currentIndex < this.props.data.length -1 ? false : true}>&rang;</button>
                 </div>

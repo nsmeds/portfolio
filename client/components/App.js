@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { CSSTransitionGroup } from 'react-transition-group';
 import Header from './Header';
 import About from './About';
 import Portfolio from './Portfolio';
@@ -36,12 +37,25 @@ export default class App extends React.Component {
         }
         return (
             <Router>
-                <div>
-                    <Header />
-                    <Route exact path="/" component={About} />
-                    <Route path="/portfolio" render={PortfolioRoute} />
-                    <Route path="/contact" component={Contact} />
-                </div>
+                    <div>
+                        <Header />
+                            <Route render={({location}) => (
+                                    <CSSTransitionGroup
+                                        transitionName="fade"
+                                        transitionEnterTimeout={300}
+                                        transitionLeaveTimeout={300}
+                                    >
+                                        <Switch key={location.key} location={location}>
+                                            <Route exact path="/" component={About} />
+                                            <Route path="/portfolio" render={PortfolioRoute} />
+                                            <Route path="/contact" component={Contact} />
+                                        </Switch>
+
+                                    </CSSTransitionGroup>
+                            )}/>
+
+
+                    </div>
             </Router>
         )
     }

@@ -7,7 +7,8 @@
       "github": "https://github.com/nsmeds/riverbed-server",
       "live": "https://riverbed.herokuapp.com/"
     },
-    "image": "vendor/images/riverbed.jpg"
+    "image": "vendor/images/riverbed.jpg",
+    "key": 0
   },
   {
     "url": "https://github.com/Portamento-development/",
@@ -17,7 +18,8 @@
       "github": "https://github.com/Portamento-development/portamento-app",
       "live": "https://portamento.herokuapp.com/"
     },
-    "image": "vendor/images/portamento.jpg"
+    "image": "vendor/images/portamento.jpg",
+    "key": 1
   },
   {
     "url": "https://github.com/nsmeds/CacheMoneyApp",
@@ -27,7 +29,8 @@
       "github": "https://github.com/nsmeds/CacheMoneyApp",
       "live": "http://cachemoneydb.herokuapp.com/"
     },
-    "image": ""
+    "image": "",
+    "key": 2
   },
   {
     "url": "https://github.com/Words-for-Music/words-for-music",
@@ -47,7 +50,8 @@
       "github": "https://github.com/brekt/sudoku",
       "live": "http://45.55.207.50/"
     },
-    "image": ""
+    "image": "",
+    "key": 3
   },
   {
     "url": "https://github.com/nsmeds/90s-quiz",
@@ -57,6 +61,7 @@
       "github": "https://github.com/nsmeds/90s-quiz",
       "live": "http://nsmeds.github.io/90s-quiz/"
     },
-    "image": ""
+    "image": "",
+    "key": 4
   }
 ]

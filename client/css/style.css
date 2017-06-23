@@ -226,7 +226,6 @@ nav:hover ul {
   font-size: 1.1em;
 }
 
-
 .project-image {
   max-height: 50vh;
   border-radius: 2px;
@@ -237,6 +236,26 @@ nav:hover ul {
 
 .project-body {
   text-align: left;
+}
+
+/***** react-transition-group properties *****/
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0.01;
+  transition: opacity 0ms ease-in;
 }
 
 @media only screen and (min-width: 480px) {
