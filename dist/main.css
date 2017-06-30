@@ -82,8 +82,8 @@ nav {
 }
 
 .main-content p {
-  font-size: 0.9em;
-  max-width: 640px;
+  font-size: 1em;
+  max-width: 800px;
 }
 
 .main-content ul {
@@ -122,11 +122,6 @@ footer {
   margin-bottom: 1em;
   text-align: center;
   padding-top: 1em;
-}
-
-.dateline {
-  font-size: 0.8em;
-  margin-top: 1em;
 }
 
 /**** Modules ****/
@@ -222,7 +217,7 @@ nav:hover ul {
 .project-footer {
   margin-top: 1em;
   margin-bottom: 1em;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 /***** react-transition-group properties *****/
@@ -262,7 +257,7 @@ nav:hover ul {
 
   header,
   footer {
-    max-width: 700px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
   }
