@@ -1,9 +1,7 @@
-// var express = require('express'),
-//   port = process.env.PORT || 3000,
-//   app = express();
+var express = require('express'),
+  port = process.env.PORT || 3000,
+  app = express();
 
-// app.use(express.static('./'));
+app.use(express.static('dist/'));
 
-// app.listen(port, function() {
-//   console.log('Server started on port ' + port + '!');
-// });
+app.listen(port);
