@@ -19,8 +19,8 @@ const Header = props => {
             </nav>
             <nav className="lower-nav">
                 <ul className="menu-items">
-                    <li className="tab" data-tab="projects"><Link to="/portfolio">Portfolio</Link></li>
-                    <li className="tab" data-tab="about"><Link to="/">About</Link></li>
+                    <li className="tab" data-tab="projects"><Link to="/">Portfolio</Link></li>
+                    <li className="tab" data-tab="about"><Link to="/about">About</Link></li>
                     <li className="tab" data-tab="repos"><Link to="/contact">Contact</Link></li>
                 </ul>
             </nav>

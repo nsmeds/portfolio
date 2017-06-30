@@ -46,8 +46,8 @@ export default class App extends React.Component {
                                         transitionLeaveTimeout={300}
                                     >
                                         <Switch key={location.key} location={location}>
-                                            <Route exact path="/" component={About} />
-                                            <Route path="/portfolio" render={PortfolioRoute} />
+                                            <Route path="/about" component={About} />
+                                            <Route exact path="/" render={PortfolioRoute} />
                                             <Route path="/contact" component={Contact} />
                                         </Switch>
 

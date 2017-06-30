@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:700|Open+Sans:400,700');
 
 html {
   min-height: 100%;
-
 }
 
 body {
@@ -148,20 +147,12 @@ nav:hover ul {
 }
 
 .menu-items {
-  display: none;
+  display: flex;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
 }
 
-.icons {
-    display: flex;
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
-.icons li {
-  padding-right: 1em;
-}
-
-.project {
+/*.project {
   padding-bottom: 1em;
   border-bottom: 1px solid hsl(200,50%,89%);
 }
@@ -170,13 +161,9 @@ nav:hover ul {
   border: none;
 }
 
-/*.read-more {
-  font-size: 0.8em;
-}*/
-
 .template {
   display: none;
-}
+}*/
 
 .project-nav-button {
   height: 30vh;
@@ -214,10 +201,6 @@ nav:hover ul {
   text-align: center;
 }
 
-.project-li a {
-  font-size: 0.9em;
-}
-
 .project-li h4 {
   font-weight: 700;
   text-align: left;
@@ -236,6 +219,12 @@ nav:hover ul {
 
 .project-body {
   text-align: left;
+}
+
+.project-footer {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 0.9em;
 }
 
 /***** react-transition-group properties *****/
@@ -258,17 +247,20 @@ nav:hover ul {
   transition: opacity 0ms ease-in;
 }
 
+#menuburger {
+  display: none;
+}
+
+.tab {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.icons {
+  display: none;
+}
+
 @media only screen and (min-width: 480px) {
-
-  #menuburger {
-    display: none;
-  }
-
-  .menu-items {
-    display: flex;
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
-  }
 
   header,
   footer {
@@ -277,14 +269,19 @@ nav:hover ul {
     margin-right: auto;
   }
 
-  .tab {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-
   h1 {
     font-size: 2em;
     margin: 0.2em 0;
+  }
+
+  .icons {
+      display: flex;
+      padding-left: 1em;
+      padding-right: 1em;
+  }
+
+  .icons li {
+    padding-right: 1em;
   }
 
   .upper-nav {
