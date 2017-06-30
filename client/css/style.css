@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:700|Open+Sans:400,700');
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: hsl(0,0%,25%);
+}
+
+/***** List Styles *****/
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+/***** Link Styles *****/
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+a:visited {
+  color: inherit;
+}
+
+/***** Layout *****/
+
+body {
+  font-weight: 400;
+  font-family: 'Open Sans', monospace;
+}
+
+h3, .tab, .project-nav-button {
+  color: hsl(200,50%,38%);
+}
+
+h1, h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: hsl(200,50%,38%);
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.3em 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  /*font-size: 1.4em;*/
+  margin: 0;
+}
+
+h3 {
+  font-weight: 400;
+  margin: 0.2em 0;
+  letter-spacing: 0.1em;
+}
+
+nav {
+  border-bottom: 1px solid hsl(200,50%,89%);
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 0.75em 0;
+}
+
+#about, #contact {
+  flex-direction: column;
+  align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.main-content p {
+  font-size: 0.9em;
+  max-width: 640px;
+}
+
+.main-content ul {
+  padding: 0;
+  margin: 0 0.5em;
+}
+
+.main-content a {
+  color: hsl(200, 50%, 38%);
+}
+
+.main-content h4 {
+  align-self: left;
+}
+
+.content-wrap {
+  align-items: flex-start;
+  width: 100%;
+  max-width: 640px;
+}
+
+.portfolio-projects {
+  display: flex;
+  flex-direction: row;
+}
+
+.project-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  opacity: 0.75;
+}
+
+footer {
+  border-top: 1px solid hsl(200,50%,89%);
+  margin-bottom: 1em;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.dateline {
+  font-size: 0.8em;
+  margin-top: 1em;
+}
+
+/**** Modules ****/
+
+.header-headings {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  padding-left: 1em;
+  margin-bottom: 0.2em;
+}
+
+nav:hover ul {
+  /*display: block;*/
+  list-style: none;
+}
+
+.menu-items {
+  display: flex;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+/*.project {
+  padding-bottom: 1em;
+  border-bottom: 1px solid hsl(200,50%,89%);
+}
+
+.project:nth-last-of-type(1) {
+  border: none;
+}
+
+.template {
+  display: none;
+}*/
+
+.project-nav-button {
+  height: 30vh;
+  border-radius: 50%;
+  background: inherit;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  
+}
+
+.project-nav-button[name="prev"] {
+  padding: 0 .2em 0 0;
+}
+
+.project-nav-button[name="next"] {
+  padding: 0 0 0 .2em;
+}
+
+.project-nav-button:hover {
+  opacity: 0.5;
+}
+
+.project-nav-button:disabled {
+  color: hsl(0,0%,25%);
+  opacity: 0.25;
+}
+
+.project-nav-button:focus {
+  outline-color: #fff;
+  color: hsl(200, 50%, 60%);
+}
+
+.project-li {
+  text-align: center;
+}
+
+.project-li h4 {
+  font-weight: 700;
+  text-align: left;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 1.1em;
+}
+
+.project-image {
+  max-height: 50vh;
+  border-radius: 2px;
+  border: 1px solid #eee;
+  padding: 0.2em;
+  max-width: 100%;
+}
+
+.project-body {
+  text-align: left;
+}
+
+.project-footer {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 0.9em;
+}
+
+/***** react-transition-group properties *****/
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0.01;
+  transition: opacity 0ms ease-in;
+}
+
+#menuburger {
+  display: none;
+}
+
+.tab {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.icons {
+  display: none;
+}
+
+@media only screen and (min-width: 480px) {
+
+  header,
+  footer {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin: 0.2em 0;
+  }
+
+  .icons {
+      display: flex;
+      padding-left: 1em;
+      padding-right: 1em;
+  }
+
+  .icons li {
+    padding-right: 1em;
+  }
+
+  .upper-nav {
+      display: flex;
+  }
+
+  .lower-nav {
+      display: flex;
+  }
+
+  .main-content {
+    padding: 0 0.5em 0.75em 0.5em;
+  }
+  
+  .main-content ul {
+    margin: 0 1em;
+  }
+
+  /*.project-nav-button[name="prev"] {
+    margin-left: -1.5em;
+    margin-right: 1em;
+  } 
+
+  .project-nav-button[name="next"] {
+    margin-right: -1.5em;
+    margin-left: 1em;
+  }*/
+
+}
